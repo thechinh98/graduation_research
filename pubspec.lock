@@ -208,7 +208,7 @@ packages:
   game:
     dependency: "direct main"
     description:
-      path: "lib/modules/module_game"
+      path: "lib/modules/game"
       relative: true
     source: path
     version: "0.0.1"

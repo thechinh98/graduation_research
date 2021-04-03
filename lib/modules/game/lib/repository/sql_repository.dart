@@ -27,7 +27,7 @@ class SqfliteRepository {
   String appDbName = 'data-$DB_VERSION.db';
   String dataDbName = 'data.db';
   String userDbName = 'user_data.db';
-
+  
   Database get moduleDB  => _db!;
 
   Future initDb() async {
