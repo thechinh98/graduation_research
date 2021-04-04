@@ -9,7 +9,6 @@ import 'package:game/model/game/game_object.dart';
 import 'package:game/model/game/quiz_game_object.dart';
 import 'package:game/screen/study/game_view/game_item_view.dart';
 import 'package:game/screen/study/study_screen.dart';
-import 'package:game/utils/constant.dart';
 
 class QuizView extends StatelessWidget {
   final QuizGameObject gameObject;

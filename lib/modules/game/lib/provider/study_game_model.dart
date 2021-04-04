@@ -67,7 +67,7 @@ class StudyGameModel extends GameModel implements GamePlay {
     listGames!.sort((a, b) => (a.orderIndex! < b.orderIndex! ? -1 : 1));
 
     // notifyListeners();
-    print('Phungtd: StudyGameModel- load data - listGame size: ${listGames!.length}');
+    print('CHINHLT: StudyGameModel- load data - listGame size: ${listGames!.length}');
     calcProgress();
     notifyListeners();
     onContinue();
@@ -89,6 +89,19 @@ class StudyGameModel extends GameModel implements GamePlay {
           case GameType.FLASH_CARD:
             final flashGame = FlashGameObject.fromQuestion(question);
             listGames!.add(flashGame);
+            break;
+          case GameType.SPELLING:
+            final spellingGame = SpellingGameObject.fromQuestion(question);
+            listGames!.add(spellingGame);
+            break;
+          case GameType.MATCHING:
+            List<Question> questionList = [];
+            questionList.add(question);
+            if (iterator.moveNext()) {
+              questionList.add(iterator.current);
+              final matchingGame = MatchingGameObject.fromQuestions(questionList);
+              listGames!.add(matchingGame);
+            }
             break;
           default:
             break;

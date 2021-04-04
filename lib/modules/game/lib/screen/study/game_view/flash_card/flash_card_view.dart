@@ -7,17 +7,17 @@ import 'package:game/model/game/flash_game_object.dart';
 import 'package:game/screen/study/game_view/game_item_view.dart';
 import 'package:game/screen/study/study_screen.dart';
 
-class FlashCard extends StatefulWidget {
+class FlashCardView extends StatefulWidget {
   final FlashGameObject gameObject;
   final OnAnswer? onAnswer;
 
-  const FlashCard({Key? key, required this.gameObject, this.onAnswer})
+  const FlashCardView({Key? key, required this.gameObject, this.onAnswer})
       : super(key: key);
   @override
-  _FlashCardState createState() => _FlashCardState();
+  _FlashCardViewState createState() => _FlashCardViewState();
 }
 
-class _FlashCardState extends State<FlashCard> {
+class _FlashCardViewState extends State<FlashCardView> {
   FlashGameObject get gameObject => widget.gameObject;
   OnAnswer? get onAnswer => widget.onAnswer;
 

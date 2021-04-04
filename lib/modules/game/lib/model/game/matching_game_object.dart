@@ -6,7 +6,7 @@ import 'package:game/screen/study/game_view/matching/matching_view.dart';
 class MatchingGameObject extends GameObject{
       List<Question> questions = [];
       int clickNumAvailable = 0;
-      MatchingGameObject.fromQuestion(List<Question> _question) : super.fromQuestion(_question.first){
+      MatchingGameObject.fromQuestions(List<Question> _question) : super.fromQuestion(_question.first){
         _question.forEach((element) {
           if(element.content!.isEmpty || element.choices!.isEmpty) return;
           questions.add(Question()..content = element.content..id = element.id);
