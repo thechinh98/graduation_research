@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ElevatedButton(
           child: Text('Quiz Game'),
           onPressed: () {
-            final topicId = '4571048042299392';
+            final topicId = '4536143782608896';
             Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => StudyScreen(topicId)),
             );
